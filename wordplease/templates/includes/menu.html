@@ -1,0 +1,11 @@
+<ul class="nav navbar-nav" style="width: 100%;">
+    <li><a href="{% url 'posts_home' %}">Home</a></li>
+{% if user.is_authenticated %}
+    <li><a href="{% url 'posts_create' %}">Crear foto</a></li>
+    <li><a href="{% url 'users_logout' %}">Logout</a></li>
+{% else %}
+    <li><a href="{% url 'users_login' %}">Login</a></li>
+    <li><a href="{% url 'users_signup' %}">Sign up</a></li>
+{% endif %}
+
+</ul>

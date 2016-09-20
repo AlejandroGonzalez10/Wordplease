@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block body %}
+    <h1>Bienvenido a Wordplease!</h1>
+
+    {% if posts_list|length > 0 %}
+        <h2>Últimos post publicados</h2>
+    {% else %}
+        <h2>Últimos post publicados</h2>
+    {% endif %}
+{% endblock %}
